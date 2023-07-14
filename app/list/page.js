@@ -1,4 +1,4 @@
-'use client';
+'use client';//html내에서 자바스크립트 사용가능
 import {useState} from 'react'
 
 export default function List() {
@@ -23,6 +23,7 @@ export default function List() {
                     <button onClick={()=>{
                       
                     }}>+</button>
+
                     </div>
                   </div>
                 )
