@@ -17,11 +17,11 @@ export default function List() {
                     
                     <div className='btn-count'>
                     <button onClick={()=>{
-                      setCount(count++)
+                      
                     }}>-</button>
                     <div> &nbsp;{ count } &nbsp;</div>
                     <button onClick={()=>{
-                      setCount(count--)
+                      
                     }}>+</button>
                     </div>
                   </div>
