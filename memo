@@ -1,3 +1,5 @@
+Next.js part1
+
 app 폴더 : 주로 코드짤 폴더 
 page.js : 메인페이지 
 layout.js : 메인페이지 감싸는 용도의 페이지
@@ -40,7 +42,7 @@ Next.js를 쓰면 그런 코드를 짤 필요가 없이 폴더와 파일 하나�
 3. return 오른쪽에 뭐 적으면 array로 담아줍니다.
 
 반복문 사용시 주의사항 반복문으로 반복생성중인 html에는 key={} 속성을 집어넣으라고 권장
-{} 안에는 1씩 증가하는 정수 같은거 넣으면 됩니다. 
+{} 안에는 1씩 증가하는 정수 같은거 넣으면 좋음(i)
 
 성능과 속도가 중요하다면 이미지 넣을 때 <Image /> 태그
 자동으로 이미지 lazy loading & 사이즈 최적화 & layout shift 방지를 해줌
@@ -53,9 +55,7 @@ public 폴더에 있으면 경로는 /public/어쩌구.png 하면 됩니다.
 2. function의 return ( ) 안에 축약할 길고 더러운 html을 담습니다. 
 3. 원하는 곳에서 <작명/> 을 사용합니다. 
 
-server component vs client component
-
- 
+컴포넌트의 2가지 종류 : server component vs client component
 
 page.js, layout.js에 대충 만드는 컴포넌트들은 전부 server component 입니다.
 장점 : 페이지 로드시 자바스크립트가 별로 필요가 없어서 빠름
@@ -74,4 +74,19 @@ html을 로드하고나서 거기에 리액트 문법을 적용하기 위해
 그래서 큰 페이지들은 보통 server component로 만들고
 자바스크립트 기능이 필요한 특정 부분은 client component로 만들어서 넣는게 좋은 습관
 
-컴포넌트를 다른 파일에서 사용하려면 export{ }와 import{}from '경로'를 잘 사용하자
+컴포넌트, 변수를 다른 파일에서 사용하려면 export{ }와 import{}from '경로'를 잘 사용하자
+
+
+props란? : 부모->자식컴포넌트로 변수 줌.
+다만 패륜, 불륜 전송은 불가능함 그러니까 최상위 컴포넌트에 변수 쓰자
+fetch : next.js에서 db에서 데이터를 받을 때 같은 데이터요청이 있으면 
+알아서 한개로 압축해줌(deduplication 가능)
+
+
+state의 장점 : state가 변경되면  state쓰는 html이 자동으로 재랜더링 됨
+다만 홈페이지 제목같이 변동성이 적은부분까지 state를 만들 필요는 없다. 그냥하드코딩해버리자.
+state변경함수 사용 시 새로운 state와 기존 state와 같으면 변경을 하지 않는다.그래서 카피를 한다.(next.js part1 마지막강의)
+
+
+
+
