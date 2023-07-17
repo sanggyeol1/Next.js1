@@ -14,9 +14,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <div className="navbar">
-          <Link href="/">home </Link>
-          <Link href="/list"> list </Link>
-          <Link href="/cart"> cart </Link>
+          <Link href="/">home</Link>
+          <Link href="/list">list</Link>
         </div>
         {children}
       </body>
